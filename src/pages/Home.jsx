@@ -22,10 +22,10 @@ function Home() {
     { name: "Ms. Kaur", skill: "Pottery", available: false },
   ]);
   const [products] = useState([
-    { id: 1, title: "Handcrafted Wooden Spoon", price: "₹300" },
-    { id: 1, title: "Artisanal Clay Pot", price: "₹600" },
-    { id: 1, title: "Craftsmanship Wooden Knife", price: "₹500" },
-    { id: 2, title: "Clay Tea Cup Set", price: "₹550" },
+    { id: 1, title: "Handcrafted Wooden Spoon", src: "https://images.unsplash.com/photo-1579892876770-461a88bd87df?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", price: "₹300" },
+    { id: 2, title: "Artisanal Clay Pot",src:"https://images.unsplash.com/photo-1609881822242-f26da08bf76a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXJ0aXNhbmFsJTIwQ2xheSUyMFBvdHxlbnwwfHwwfHx8MA%3D%3D", price: "₹600" },
+    { id: 3, title: "Craftsmanship Wooden Knife",src:"https://images.unsplash.com/photo-1618153283347-6985ec974c07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q3JhZnRzbWFuc2hpcCUyMFdvb2RlbiUyMEtuaWZlfGVufDB8fDB8fHww", price: "₹500" },
+    { id: 4, title: "Clay Tea Cup Set",src:"https://images.unsplash.com/photo-1611707111587-878a8256c11a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGF5JTIwVGVhJTIwQ3VwJTIwU2V0fGVufDB8fDB8fHww", price: "₹550" },
   ]);
   const [buyMessage, setBuyMessage] = useState("");
 

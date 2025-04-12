@@ -11,7 +11,7 @@ const Marketplace = ({ products, onBuy }) => {
           >
             <div>
               <img
-                src={item.image || "https://via.placeholder.com/200"}
+                src={item.src || "https://via.placeholder.com/200"}
                 alt={item.title}
                 className="w-full h-48 object-cover rounded-xl mb-4"
               />
