@@ -38,35 +38,42 @@ function Home() {
     setForumPosts((prevPosts) => [...prevPosts, { user, question }]);
   }, []);
 
-  const handleBuy = useCallback((product) => {
-    if (!product) return; // Avoid empty product
+  const handleBuy = useCallback(
+    (product) => {
+      if (!product) return; // Avoid empty product
 
-    addToCart(product);
-    setBuyMessage(`✅ You bought "${product.title}" and it was added to your cart!`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    
-    setTimeout(() => {
-      setBuyMessage(""); // Clear message after 3 seconds
-    }, 3000);
-  }, [addToCart]);
+      addToCart(product);
+      setBuyMessage(
+        `✅ You bought "${product.title}" and it was added to your cart!`
+      );
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      setTimeout(() => {
+        setBuyMessage(""); // Clear message after 3 seconds
+      }, 3000);
+    },
+    [addToCart]
+  );
 
   return (
     <div className="bg-gradient-to-r from-blue-100 to-indigo-200 min-h-screen font-sans text-gray-800">
-      <header className="text-center p-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md rounded-b-3xl">
-        <h1 className="text-4xl font-extrabold">
+      <header className="text-center p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md rounded-b-3xl">
+        <h1 className="text-3xl sm:text-4xl font-extrabold">
           🧓 Cross-Generation Knowledge Platform 👶
         </h1>
-        <p className="text-lg mt-3">Preserving skills. Connecting generations.</p>
-        <div className="mt-6 space-x-6">
+        <p className="text-base sm:text-lg mt-2 sm:mt-3">
+          Preserving skills. Connecting generations.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
           <Link
             to="/modules"
-            className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-blue-100 transition-all duration-200"
+            className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-blue-100 transition-all duration-200 w-full sm:w-auto"
           >
             Browse Modules
           </Link>
           <Link
             to="/cart"
-            className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-blue-100 transition-all duration-200"
+            className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-blue-100 transition-all duration-200 w-full sm:w-auto"
           >
             View Cart
           </Link>
@@ -74,12 +81,12 @@ function Home() {
       </header>
 
       {buyMessage && (
-        <div className="text-center bg-green-100 border border-green-400 text-green-700 py-3 rounded-md shadow-lg">
+        <div className="text-center bg-green-100 border border-green-400 text-green-700 py-3 rounded-md shadow-lg mt-6 mx-4 sm:mx-8">
           {buyMessage}
         </div>
       )}
 
-      <main className="p-8 space-y-12">
+      <main className="p-6 sm:p-8 space-y-12">
         <LearningModules />
         <Mentorship mentors={mentors} />
         <UploadSection uploads={uploads} onUpload={handleUpload} />
@@ -88,7 +95,9 @@ function Home() {
       </main>
 
       <footer className="bg-blue-700 text-white text-center py-4 mt-12">
-        <p className="text-sm">&copy; 2025 Cross-Generation Knowledge Platform. All rights reserved.</p>
+        <p className="text-sm">
+          © 2025 Cross-Generation Knowledge Platform. All rights reserved.
+        </p>
       </footer>
     </div>
   );
