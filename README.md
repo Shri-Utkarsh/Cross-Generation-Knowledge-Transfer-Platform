@@ -47,8 +47,8 @@ Crossgen is a modern educational platform that connects learners with interactiv
 ## 📦 Setup Instructions
 
 1. **Clone the repo**
-    git clone https://github.com/your-username/crossgen-platform.git
-    cd crossgen-platform
+    git clone "https://github.com/Shri-Utkarsh/Cross-Generation-Knowledge-Transfer-Platform.git"
+    cd Cross-Generation-Knowledge-Transfer-Platform
 
 2. **Install dependencies**
     npm install
